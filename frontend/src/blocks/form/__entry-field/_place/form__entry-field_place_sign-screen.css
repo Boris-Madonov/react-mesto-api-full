@@ -1,0 +1,21 @@
+.form__entry-field_place_sign-screen {
+  border-bottom: 2px solid #CCCCCC;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.form__entry-field_place_sign-screen::-webkit-input-placeholder {
+  color: #CCCCCC;
+}
+
+.form__entry-field_place_sign-screen::-moz-placeholder {
+  color: #CCCCCC;
+}
+
+.form__entry-field_place_sign-screen:-moz-placeholder {
+  color: #CCCCCC;
+}
+
+.form__entry-field_place_sign-screen:-ms-input-placeholder {
+  color: #CCCCCC;
+}

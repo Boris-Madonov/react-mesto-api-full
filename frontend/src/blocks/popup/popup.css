@@ -1,0 +1,21 @@
+@import url(./__item/popup__item.css);
+@import url(./__item-image/popup__item-image.css);
+@import url(./__item-name/popup__item-name.css);
+@import url(./__container/popup__container.css);
+@import url(./__close-button/popup__close-button.css);
+@import url(./__register-icon/popup__register-icon.css);
+@import url(./__message-text/popup__message-text.css);
+
+.popup {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+  transition: visibility 1s, opacity 0.5s ease-in-out;
+}

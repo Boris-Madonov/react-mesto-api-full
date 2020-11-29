@@ -1,0 +1,25 @@
+@import url(./__form/sign-screen__form.css);
+@import url(./__link/sign-screen__link.css);
+@import url(./__signin/sign-screen__signin.css);
+@import url(./__text/sign-screen__text.css);
+
+.sign-screen {
+  margin: 60px auto 0;
+  padding-bottom: 112px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 358px;
+  min-height: calc(100vh - 120px);
+  position: relative;
+}
+
+@media screen and (max-width: 619px) {
+  .sign-screen {
+    max-width: 320px;
+    margin: 40px auto 0;
+    padding-bottom: 77px;
+    min-height: calc(100vh - 85px);
+  }
+}

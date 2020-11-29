@@ -1,0 +1,14 @@
+.form__field_place_popup {
+  margin: 0 auto;
+}
+
+.form__field_place_popup:last-of-type {
+  margin: 0 auto 18px
+}
+
+@media screen and (max-width: 619px) {
+  .form__field_place_popup {
+    width: 200px;
+    height: 52px;
+  }
+}

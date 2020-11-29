@@ -1,0 +1,17 @@
+.sign-screen__signin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  width: 358px;
+  top: 444px;
+  left: 0;
+}
+
+@media screen and (max-width: 619px) {
+  .sign-screen__signin {
+    width: 320px;
+    top: 387px;
+  }
+}

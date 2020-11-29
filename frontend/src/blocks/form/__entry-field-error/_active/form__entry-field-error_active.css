@@ -1,0 +1,13 @@
+.form__entry-field-error_active {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: normal;
+  color: #ff0000;
+}
+
+@media screen and (max-width: 619px) {
+  .form__entry-field-error_active {
+    font-size: 7px;
+    line-height: 9px;
+  }
+}

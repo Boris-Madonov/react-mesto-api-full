@@ -1,0 +1,19 @@
+.form__submit-button_place_sign-screen {
+  border: solid 2px #ffffff;
+  background-color: #ffffff;
+  color: #000000;
+  transition: opacity .5s ease;
+  margin: 186px auto 0;
+}
+
+.form__submit-button_place_sign-screen:hover {
+  opacity: .85;
+}
+
+@media screen and (max-width: 619px) {
+  .form__submit-button_place_sign-screen {
+    width: 260px;
+    height: 46px;
+    margin: 143px auto 0;
+  }
+}

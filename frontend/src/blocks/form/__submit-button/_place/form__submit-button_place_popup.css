@@ -1,0 +1,19 @@
+.form__submit-button_place_popup {
+  border: solid 2px #000000;
+  background-color: #000000;
+  color: #ffffff;
+  transition: opacity .5s ease;
+  margin: 0 auto 36px;
+}
+
+.form__submit-button_place_popup:hover {
+  opacity: .8;
+}
+
+@media screen and (max-width: 619px) {
+  .form__submit-button_place_popup {
+    width: 200px;
+    height: 40px;
+    margin: 0 auto 30px;
+  }
+}

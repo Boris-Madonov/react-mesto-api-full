@@ -1,0 +1,11 @@
+.popup__item {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}

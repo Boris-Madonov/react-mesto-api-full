@@ -1,0 +1,9 @@
+.form__fieldset_place_popup {
+  margin: 111px 0 0;
+}
+
+@media screen and (max-width: 619px) {
+  .form__fieldset_place_popup {
+    margin: 84px 0 0;
+  }
+}

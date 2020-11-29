@@ -1,0 +1,9 @@
+.form__field_place_sign-screen {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 619px) {
+  .form__field_place_sign-screen {
+    width: 260px;
+  }
+}

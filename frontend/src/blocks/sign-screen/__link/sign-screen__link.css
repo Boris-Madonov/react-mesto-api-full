@@ -1,0 +1,12 @@
+.sign-screen__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  transition: opacity .5s ease;
+}
+
+.sign-screen__link:hover {
+  opacity: .6;
+}
