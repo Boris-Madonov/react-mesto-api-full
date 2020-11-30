@@ -20,7 +20,7 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors);
+app.use(cors());
 
 app.use(requestLogger);
 app.use('/', router);

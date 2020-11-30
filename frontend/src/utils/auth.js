@@ -2,7 +2,7 @@ export const BASE_URL = 'https://api.mesto.students.nomoredomains.monster';
 
 const response = (res) => {
   if (res.ok) {
-      return res.json();
+      return res;
   }
   return Promise.reject(res);
 };
