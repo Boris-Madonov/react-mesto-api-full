@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Boris-Madonov/react-mesto-api-full/issues"
   },
-  "homepage": "https://github.com/Boris-Madonov/react-mesto-api-full#readme"
+  "homepage": "https://github.com/Boris-Madonov/react-mesto-api-full#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }
