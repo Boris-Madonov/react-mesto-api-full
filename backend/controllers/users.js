@@ -17,11 +17,52 @@ const getUsers = async (req, res, next) => {
 
 const getCurrentUser = async (req, res, next) => {
   try {
-    const user = await User.findById(req.params.userId);
+    const user = await User.findById(req.user);
 
     if (!user) {
       throw notFoundError('Нет пользователя с таким id');
     }
+
+    return res.send(user);
+  } catch (error) {
+    console.log(error);
+    if (error.name === 'CastError') {
+      return badRequestError('Передан некорректный id');
+    }
+    return next(error);
+  }
+};
+
+const setUserInfo = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.user);
+    if (!user) {
+      throw notFoundError('Нет пользователя с таким id');
+    }
+    user.name = req.body.name;
+    user.about = req.body.about;
+
+    await user.save();
+
+    return res.send(user);
+  } catch (error) {
+    console.log(error);
+    if (error.name === 'CastError') {
+      return badRequestError('Передан некорректный id');
+    }
+    return next(error);
+  }
+};
+
+const setUserAvatar = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.user);
+    if (!user) {
+      throw notFoundError('Нет пользователя с таким id');
+    }
+    user.avatar = req.body.avatar;
+
+    await user.save();
 
     return res.send(user);
   } catch (error) {
@@ -71,6 +112,8 @@ const login = (req, res, next) => {
 module.exports = {
   getUsers,
   getCurrentUser,
+  setUserInfo,
+  setUserAvatar,
   createUser,
   login,
 };

@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const isURL = require('validator/lib/isURL');
 
 const cardSchema = new Schema({
   name: {
@@ -11,10 +12,8 @@ const cardSchema = new Schema({
     type: String,
     required: true,
     validate: {
-      validator(v) {
-        return /^https?:\/\/(www\.)?[\w-.~:/?#[\]@!$&'()*+,;=]+#?$/gi.test(v);
-      },
-      message: 'Ошибка в ссылке',
+      validator: (v) => isURL(v),
+      message: (props) => `${props.v} ошибка в ссылке`,
     },
   },
   owner: {

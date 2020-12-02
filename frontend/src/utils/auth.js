@@ -1,8 +1,8 @@
-export const BASE_URL = 'https://api.mesto.students.nomoredomains.monster';
+export const BASE_URL = 'http://localhost:3000';
 
 const response = (res) => {
   if (res.ok) {
-      return res;
+    return res.json();
   }
   return Promise.reject(res);
 };
@@ -14,9 +14,17 @@ export const register = (email, password) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({email, password})
+    body: JSON.stringify({
+      email,
+      password,
+    })
   })
-  .then(response);
+  .then((res) => {
+    if (res.ok) {
+      return res;
+    }
+    return Promise.reject(res);
+  });
 };
 
 export const authorize = (email, password) => {
