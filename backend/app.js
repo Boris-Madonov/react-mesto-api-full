@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
-// eslint-disable-next-line import/no-extraneous-dependencies
 const cors = require('cors');
 const router = require('./routes/router');
 const error = require('./middlewares/error');

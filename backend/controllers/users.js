@@ -2,7 +2,12 @@ const { NODE_ENV, JWT_SECRET } = process.env;
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const User = require('../models/user');
-const { badRequestError, unauthorizedError, notFoundError } = require('../errors/errors');
+const {
+  badRequestError,
+  unauthorizedError,
+  notFoundError,
+  conflictError,
+} = require('../errors/errors');
 
 const getUsers = async (req, res, next) => {
   try {
@@ -76,6 +81,10 @@ const setUserAvatar = async (req, res, next) => {
 
 const createUser = async (req, res, next) => {
   try {
+    const newUser = await User.findOne({ email: req.body.email });
+    if (newUser) {
+      throw conflictError('Пользователь с таким email уже существует');
+    }
     const user = await bcrypt.hash(req.body.password, 10)
       .then((hash) => {
         User.create({
