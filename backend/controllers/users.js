@@ -85,7 +85,7 @@ const createUser = async (req, res, next) => {
     if (newUser) {
       throw conflictError('Пользователь с таким email уже существует');
     }
-    const user = await bcrypt.hash(req.body.password, 10)
+    await bcrypt.hash(req.body.password, 10)
       .then((hash) => {
         User.create({
           email: req.body.email,
@@ -93,7 +93,7 @@ const createUser = async (req, res, next) => {
         });
       });
 
-    return res.send(user);
+    return res.send();
   } catch (error) {
     console.log(error);
     if (error.name === 'ValidationError') {
