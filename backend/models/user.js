@@ -7,6 +7,7 @@ const userSchema = new Schema({
   name: {
     type: String,
     required: false,
+    minlength: 2,
     maxlength: 30,
     default: 'Жак-Ив Кусто',
   },
